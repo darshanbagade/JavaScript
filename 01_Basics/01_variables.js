@@ -2,7 +2,10 @@
 const accountId = 23070912; 
 let accountEmail = "darshan@gmail.com";
 var accountPassword = "abcdefghijklmnopqrstuvwxyz";
+
 accountCity = "Mumbai"; 
+//it will consider as global variable ,
+//but in the 'strict mode' it will throw the error
 
 // accountId ="123212" //re-assigning to 'const' is not allowed
 
