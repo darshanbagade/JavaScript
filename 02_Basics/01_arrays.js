@@ -10,21 +10,42 @@
 // console.log(myHeros[0]); //A.P.J Kalam
 // console.log(myHeros[1]); //Ratan Tata
 
+
+
+
 //---------------------Array Methods---------------------------
+
+
+
 
 //premitive array --> directly stored in stack
 //Array Object --> reference stored in heap
 const newArr = new Array(1,2,3,4,5);
 
-//push
+//push --> insert at end
 // console.log(newArr);  //  [ 1, 2, 3, 4, 5 ]
 // newArr.push(99);      // 99 insert at end
 // console.log(newArr);  // [ 1, 2, 3, 4, 5, 99 ]
 
-//pop
+//pop --> delete from end
 // console.log(newArr);  //  [ 1, 2, 3, 4, 5 ]
 // newArr.pop(99);      // remove from end
 // console.log(newArr);  // [ 1, 2, 3, 4, 5, 99 ]
+
+
+
+//unshift--> insert at start
+// console.log(newArr); //[ 1, 2, 3, 4, 5 ]
+// newArr.unshift(11);    
+// console.log(newArr);  //[ 11, 1, 2, 3, 4, 5 ]
+
+
+//shift--> remove element from  start
+// console.log(newArr); //[ 1, 2, 3, 4, 5 ]
+// newArr.shift();    
+// console.log(newArr);  //[  2, 3, 4, 5 ]
+
+
 
 
 //slice --> do not change the original array , gives the copy of some elements form the array
