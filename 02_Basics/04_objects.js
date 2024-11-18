@@ -79,7 +79,7 @@ const user =[
     },
 ]
 
-console.log(user[1].name); // aryan
+// console.log(user[1].name); // aryan
 
 
 
@@ -91,17 +91,61 @@ const myObj= {
 }
 
 //if we want all keys of the object , Object.keys(objName) brings the keys in array datatype
-console.log(Object.keys(myObj));  //[ 'name', 'email', 'age' ]
+// console.log(Object.keys(myObj));  //[ 'name', 'email', 'age' ]
 
-console.log(Object.values(myObj)); //[ 'darshan', 'darshan@github.com', '19' ]
+// console.log(Object.values(myObj)); //[ 'darshan', 'darshan@github.com', '19' ]
 
 //it shows of keys and value into the array format
-console.log(Object.entries(myObj)); 
+// console.log(Object.entries(myObj)); 
  //[ [ 'name', 'darshan' ], [ 'email', 'darshan@github.com' ],[ 'age', '19' ] ]
 
 
 
  //check is any key value is present in the object or not
- console.log(myObj.hasOwnProperty('name')); //true
- console.log(myObj.hasOwnProperty('address')); //flase
+//  console.log(myObj.hasOwnProperty('name')); //true
+//  console.log(myObj.hasOwnProperty('address')); //flase
  
+
+
+
+ //--------------------------------------------------------------------
+//De-constructing the objects
+
+const course ={
+    name:"Chai Aur JavaScript",
+    courseInstructor:"Hitesh Choudhary",
+    price:999
+}
+console.log(course.courseInstructor); //Hitesh Choudhary
+/*
+When we have to access the 'courseInstructor' multiple time 
+we have to write 'course.courseInstructor' again and again
+to simplify this process we can use object deconstructor 
+*/
+
+//declaring the single variable courseInstructor for accessing course.courseInstructor
+// const {courseInstructor} = course;
+// console.log(courseInstructor);  //Hitesh Choudhary
+
+//we can also declare the variable for that key property
+const {courseInstructor : instructor } = course;
+console.log(instructor);  //Hitesh Choudhary
+
+
+//-------------JSON-------------------
+
+//JSON : Javascript Object Notation
+// we use to fetch the data in JSON format from the APIs 
+
+// JSON format
+// {
+//     "key1" : "value1",
+//     "key2" : "value2",
+//     "key3" : "value3",
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
