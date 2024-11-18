@@ -22,6 +22,13 @@ const dcHeros = [ "superman", "flash", "batman"];
 // const myNewArr = [ 1, 2, 3 , [ 4, 5, [ 6,7]], [8, 9] ];
 // console.log(myNewArr);
 
+
+//spread
+// const all_new_heros = [...marvelHeros, ...dcHeros];
+// console.log(all_new_heros);
+
+
+
 //flat
 // console.log(myNewArr.flat(Infinity)); // we can mention till which level we have to make flat
 
