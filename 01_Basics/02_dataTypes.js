@@ -3,8 +3,8 @@
 //alert(3 + 4); // we are using node js, not browser
 
 //coding readability should be high
-console.log(3+3);
-console.log("Darshan");
+// console.log(3+3);
+// console.log("Darshan");
 
 
 
@@ -17,4 +17,11 @@ console.log("Darshan");
 // symbol => unique (will used in react)
 // object
 
-console.log(typeof null) // typeof null is object
+// console.log(typeof null) // typeof null is object
+
+
+
+//****when variable is decalred and if no value assigned to it, then it is undefined
+let myVariable;
+console.log(myVariable);//undefined
+console.log(typeof myVariable);//undefined
