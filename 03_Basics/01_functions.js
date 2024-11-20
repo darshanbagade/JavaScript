@@ -53,7 +53,7 @@
 // we use **rest operator ...
 //Spread and rest(collect) operators are same ,but functionailty of both is different
 
-//collect values in array
+//collect values in array,,we can apply the loop
 // function calculatePrice(val1,val2, ...nums){
 //     return nums; 
 // }
@@ -65,31 +65,31 @@
 
 
 //Passing the object to the function
-const user = {
-    username: "hitesh",
-    price: 199
-}
+// const user = {
+//     username: "hitesh",
+//     price: 199
+// }
 
-function handleObject(anyobject){
-    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
-}
+// function handleObject(anyobject){
+//     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+// }
 
 // handleObject(user); //Username is hitesh and price is 199
 
-handleObject({
-    username: "sam",
-    price: 399
-});//Username is sam and price is 399
+// handleObject({
+//     username: "sam",
+//     price: 399
+// });       //Username is sam and price is 399
 
 
 
 
 //Passing array to the funtion
-const myNewArray = [200, 400, 100, 600]
+// const myNewArray = [200, 400, 100, 600]
 
-function returnSecondValue(getArray){
-    return getArray[1];
-}
+// function returnSecondValue(getArray){
+//     return getArray[1];
+// }
 
-// console.log(returnSecondValue(myNewArray));//400
-console.log(returnSecondValue([200,350, 500, 1000]));//350
+// console.log(returnSecondValue(myNewArray));   //400
+// console.log(returnSecondValue([200,350, 500, 1000]));  //350
