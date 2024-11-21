@@ -34,17 +34,27 @@
 
 //  one(); //"hitesh"
 
-if (true) {
-    const username = "hitesh"
-    if (username === "hitesh") {
-        const website = " youtube"
-        console.log(username + website);//hitesh youtube
-    }
+// if (true) {
+//     const username = "hitesh"
+//     if (username === "hitesh") {
+//         const website = " youtube"
+//         console.log(username + website);//hitesh youtube
+//     }
     // console.log(website);//error : website is not defined (can not be accessible outside the block)
-}
+// }
 
 //  console.log(username);//username is not defined ( (can not be accessible outside the if block))
 
+
+
+
+// const a=30;
+
+// if(true){
+//     let a=20;
+//     console.log(a); //20
+// }
+// console.log(a);//30
 
 
 
