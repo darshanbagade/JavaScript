@@ -41,8 +41,8 @@ map.set('gender', 'male');
 
 //console.log(map);
 
-// for(const  of map){
-//     console.log(itr);
+// for(const i of map){
+//     console.log(i);
 // }
 /*
 [ 'name', 'darshan' ]
