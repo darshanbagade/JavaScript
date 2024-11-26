@@ -1,0 +1,192 @@
+<!-- DOM Lecture 1 and 2 -->
+
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        color: white;
+    }
+</style>
+<body>
+    <div>
+        <h1 id="title" class="heading">DOM Learing on Aur <span style="display: none;">Code</span>  </h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+    </div>
+
+    <h1 class = "heading" >First Heading</h1>
+    <h1 class = "heading" >Second Heading</h1>
+    <h1 class = "heading" >Third Heading</h1>
+    
+</body>
+</html>
+
+
+<!-- notes : -->
+
+
+<!-- 
+ DOM : Document Object Model (refer the image in the folder : image.png) 
+    - The Document Object Model (DOM) is a programming interface for web documents.
+    - It represents the structure of a web page as a tree of objects.
+    - The DOM allows us to manipulate the content, structure, and style of a web page.
+    - Understanding events in the DOM helps us handle user interactions, such as button clicks.
+
+    - To see the details of the browser's methods and properties, use `console.log(window)`.
+
+    - The `window.document` object represents the web page loaded in the browser.
+    - You can access the document object directly using `console.log(document)`.
+
+    - Use `console.dir(document)` to see all the properties and methods of the document object.
+    - `<!DOCTYPE html>` declares the document type and version of HTML.
+    - In the DOM, everything is a node, such as elements like head, body, etc.
+-->
+
+
+-->
+
+<!-- accessing the elements of the dom -->
+<!-- Practice on Console -->
+
+<!--
+1. getElementById : it will give the element with the id
+    ex: let title = document.getElementById('title');
+    console.log(title);
+
+
+
+
+
+
+2. getElementsByClassName : it will give the elements with the class name
+    ex: let heading = document.getElementsByClassName('heading');
+    console.log(heading);
+
+    if there are multiple elements with the same class name then it will give the HTMLCollection
+    -we can access the elements using the index
+    -ex: let heading = document.getElementsByClassName('heading');
+         console.log(heading[0]);
+         console.log(heading[1]);
+         console.log(heading[2]);    
+    
+    -here we can not apply forEach method on the HTMLCollection
+    -we can convert the HTMLCollection to array using Array.from() method then we can apply forEach method / array methods
+    -ex: let heading = document.getElementsByClassName('myheading');
+         let headingArray = Array.from(heading);
+         headingArray.forEach(function(item){
+             console.log(item);
+         });
+
+
+
+
+3. getElementsByTagName : it will give the elements with the tag name
+    ex: let h2 = document.getElementsByTagName('h2');
+    console.log(h2);
+
+
+
+
+
+
+
+
+
+4. querySelector : it will give the first element with the selector
+    using query selector we can select the elements with the class name, id, tag name
+
+    for class name : let heading = document.querySelector('.heading');
+    for id : let title = document.querySelector('#title'); 
+    for tag name : let h2 = document.querySelector('h2');
+    for nested elements : let span = document.querySelector('span');
+    for nested elements : let span = document.querySelector('h1 span');
+
+
+
+
+
+
+
+
+
+
+5. querySelectorAll : it will give all the elements with the selector
+   using querySelectorAll we can select the elements with the class name, id, tag name
+
+    for class name : let heading = document.querySelectorAll('.heading');
+    for id : let title = document.querySelectorAll('#title'); 
+    for tag name : let h2 = document.querySelectorAll('h2');
+    for nested elements : let span = document.querySelectorAll('h1 span');
+    document.querySelector('input[type="password"]');
+    // select 1st child of paragraph
+    document.querySelector('p:first-child');
+
+
+    -querySelectorAll will give the nodelist which is similar to the array but it is not an array
+    -we can apply forEach method on the nodelist.
+    -if are accessing the nodelist multiple times then
+    -we have to mention the index of the element to access the element
+    -ex: let heading = document.querySelectorAll('.heading');
+        console.log(heading[0]);
+        console.log(heading[1]);
+        console.log(heading[2]);
+
+        const temp = document.querySelectorAll('li');
+        console.log(temp); // NodeList(3) [li.list-item, li.list-item, li.list-item]
+        
+        // This will throw an error because temp is a NodeList, not a single element
+        // temp.style.color = "pink";
+        
+        // To change the color of the second list item
+        temp[1].style.color = "pink";
+
+
+    -we can convert the nodelist to array using Array.from() method
+    -ex: let heading = document.querySelectorAll('.heading');
+         let headingArray = Array.from(heading);
+         
+-->
+
+
+
+
+
+
+
+<!--
+How to add the content
+- We will be using textContent, innerHTML, innerText
+- InnerContent vs InnerText: InnerText will give the text which is visible, but InnerContent will give the text which is hidden as well.
+- innerHTML will give the complete html value
+- In real time, we will be using other query selector, like querySelector, querySelectorAll etc
+
+-->
+
+
+
+
+
+<!-- 
+- we can get the attibute using:
+```javascript
+  document.getElementById('title').getAttribute('id') //title
+```
+- we should not override the attribute ,so while giving new atribute, mention the previous atribute as well
+```javascript
+  document.getElementById('title').setAttribute('class', 'heading new-class');
+
+-->
