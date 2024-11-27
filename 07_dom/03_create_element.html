@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <script>
+        function addTextToDiv(text){
+            const div = document.createElement('div');
+            // console.log(div);
+            div.className ="main"; //adding class to the div
+            div.id = "myId"; //adding id to the div
+            div.setAttribute('title','mytitle'); //adding attribute to the div
+            div.style.backgroundColor = "green";
+            div.padding = "10px";
+            //textContent = "Hello World"; //it will overwrite the existing content
+
+            //creating text node 
+            //const textNode =document.createTextNode("Hello , I'm Darshan");
+             const textNode =document.createTextNode(`${text}`); 
+            div.appendChild(textNode);//appending text node to the div
+
+            document.body.appendChild(div);
+        }
+        addTextToDiv("Hello , I'm Darshan !");
+    </script>
+</body>
+</html>
