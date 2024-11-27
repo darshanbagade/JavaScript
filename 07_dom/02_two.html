@@ -1,0 +1,60 @@
+<!-- DOM Relations -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Relations</title>
+ </head>
+ <body style="background-color: #212121; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    <script>
+
+        //parent to children relation
+        const parent = document.querySelector('.parent');
+        // console.log(parent);
+        // console.log(parent.children);//gives HTML collection
+        // console.log(parent.children[1].innerHTML);//gives Tuesday
+    
+
+        // accessing all the children of the parent
+        // for(let i=0 ; i<parent.children.length ; i++){
+        //     console.log(parent.children[i].innerHTML);
+        // }
+
+
+
+        //first child and last child of the parent
+        // console.log(parent.firstElementChild);//gives first child of the parent
+        // console.log(parent.lastElementChild);//gives last child of the parent
+
+
+
+        //children to parent relation
+        const dayOne = document.querySelector('.day');
+        // console.log(dayOne);
+        // console.log(dayOne.parentElement);//gives parent element
+        
+
+
+        //siblings relation
+        const dayTwo = document.querySelectorAll('.day');
+        // console.log(dayTwo);
+        // console.log(dayTwo[1].previousElementSibling);//gives previous sibling
+        // console.log(dayTwo[1].nextElementSibling);//gives next sibling
+
+
+        //childNodes -- Useful in react ( opensource contribution )
+        console.log("Nodes ", parent.childNodes);//gives all the child nodes including text nodes and line breaks
+
+
+    </script>
+
+ </body>
+
+ </html>
