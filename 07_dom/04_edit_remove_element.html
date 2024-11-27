@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Remove Element</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+    <script>
+
+        //it traverse whole tree and then insert
+        // function addLaguage(lang){
+        //     const language = document.querySelector('.language');
+        //     console.log(language);
+        //     const li = document.createElement('li');
+        //     li.innerHTML =`${lang}`;
+        //     language.appendChild(li);
+        // }
+
+        // addLaguage('Python')
+        // addLaguage('Ruby')
+        // addLaguage('Java')
+
+
+        ///This is optimised code using textNode
+        function addLaguage(lang){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(lang));
+
+            document.querySelector('.language').appendChild(li);
+            
+        }
+        addLaguage('Python')
+        addLaguage('Ruby')
+        addLaguage('Java')
+
+
+
+        //edit : replace with
+        const thirdChild = document.querySelector('li:nth-child(3)');
+        const newli = document.createElement('li');
+        newli.appendChild(document.createTextNode("TypeScript"));
+        thirdChild.replaceWith(newli);
+
+        const firstChild =  document.querySelector('li:first-child');
+        firstChild.outerHTML ="<li>C++</li>"
+
+
+        //remove
+        const lastLang = document.querySelector('li:last-child');
+        lastLang.remove(); 
+
+    </script>
+    
+</body>
+</html>
