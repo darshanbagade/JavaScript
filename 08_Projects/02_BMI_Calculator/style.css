@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
 body{
+
     width: 100%;
     height: 100vh;
     font-family: "Noto Sans", sans-serif;
@@ -16,5 +17,34 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 10% 20% 10% 20%;
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 10px rgb(174, 0, 255);
+    background-color: #212121;
+    color: white;
+}
+
+button{
+    width: 72%;
+    padding: 5px;
+    background-color: #e1dddd;
+    border: none;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin: auto;
+    box-shadow: 0px 0px 5px rgb(174, 0, 255);
+    cursor: pointer;
+}
+#btn{
+    
+    margin-left:64px ;
+    margin-top: 0px;
+}
+
+input[type="text"]{
+    height: 18px;
+    background-color: #525252;
+    border-width: 0px;
+    padding: 4px;
+    color: rgb(239, 239, 239);
+    border-radius: 7px;
 }
