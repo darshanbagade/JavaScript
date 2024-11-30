@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Parkinsans:wght@300..800&family=Press+Start+2P&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -10,7 +10,6 @@ body{
     background-color: #131313;
     color: #fffefe;
     font-family: "Noto Sans", sans-serif;
-    
 }
 .container{
     width: 300px;
@@ -25,19 +24,22 @@ body{
 }
 #time{
     height: 28px;
-    width: 110px;
+    width: 120px;
     font-size: 16px;
     text-align: center;
     border-radius: 5px;
     background-color: #fb4848;
     color: white;
     text-align: center;
+    padding-top: 5px;
     margin-top: 15px;
+    font-family: "Orbitron", sans-serif;
+  
 }
 
 #date{
     height: 28px;
-    width: 110px;
+    width: 120px;
     font-size: 16px;
     text-align: center;
     border-radius: 5px;
@@ -45,4 +47,9 @@ body{
     color: white;
     text-align: center;
     margin-top: 10px;
+    padding-top: 5px;
+    font-family: "Orbitron", sans-serif;
+  
+    
+
 }
