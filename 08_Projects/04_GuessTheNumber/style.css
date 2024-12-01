@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #212121;
+    color: whitesmoke;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.container{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.01);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #313131;
+    padding: 50px;
+    border-radius: 5px;
+
+}
+input{
+    padding: 4px;
+    width: 130px;
+    border-radius: 4px;
+    border: none;
+    border-radius: 2px;
+    
+}
+input[type="submit"]{
+    cursor:pointer ;
+}
+#guess{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
