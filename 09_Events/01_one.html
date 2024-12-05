@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing images</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+
+        <script>
+            //Events are invoked on some ativities
+            //do not use to apply events in inner html element 
+
+
+            //dont use this appproch also , it gives less features
+            // document.querySelector("#owl").onclick = function(){
+            //     alert('Owl Alert')
+            // }
+
+
+
+            //**best approach
+            //search events on mdn
+            // document.getElementById("owl").addEventListener('click',function(){
+            //     alert('Hello Owl');
+            // },false);
+            //thrid parameter is by default false(need ti mention in some interviews) 
+
+
+            //attachEvent
+            //earlier used in jQuery - on
+
+
+
+            //-----------------------------------------------------
+            //learn by yourself
+            //types of events : keyboard, mouse,
+            //timeStamp,preventDefault(),target,toElement,srcElement,currentElement
+            //clientX,clientY,screenX,screenY
+            //altkey, ctrlkey , shiftkey, keyCodeel
+
+            //Event object - e
+            // document.getElementById('owl').addEventListener('click',function(e){
+            //     console.log(e);
+            // },false);
+
+
+
+            //event propagation , event Capturing
+            // document.getElementById('images').addEventListener('click',function(e){
+            //     console.log("clicked on ul");
+            // },false);
+            
+            // document.getElementById('owl').addEventListener('click',function(e){
+            //     console.log("owl clicked");
+            //     e.stopPropagation(); //stops the bubbleing
+            // },false);
+
+            // false : bubbleing -> from button to top 
+            // true : capturing :-from top to buttom
+
+
+            // document.getElementById('google').addEventListener('click',function(e){
+            //     console.log("google clicked");
+            //     e.preventDefault();
+            //     //The preventDefault() method cancels the event if it is cancelable
+            //     e.stopPropagation(); //stops the bubbleing
+            // },false);
+
+
+            document.getElementById('images').addEventListener('click',function(e){
+                console.log(e.target.parentNode);//parentNode is <li>
+                    let removeIt = e.target.parentNode;
+                    // removeIt.remove();
+                    removeIt.parentNode.removeChild(removeIt);
+            })
+
+
+
+        </script>
+</body>
+</html>
