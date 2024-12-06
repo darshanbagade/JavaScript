@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #applyEvent{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="applyEvent"></div>
+
+
+
+</body>
+<script>
+
+    //Events
+
+    //timeStamp : use to get the current time of the event
+    //preventDefault() : use to cancel the default action of the event if cancelable
+    //target: use to get the element that triggered the event
+    //toElement : use to get the element that the mouse pointer entered
+    //srcElement: use to get the element that triggered the event
+    //currentTarget : use to get the element that the event handler is currently attached to (the element that the event is currently being handled on)
+
+    document.getElementById('applyEvent').addEventListener('click',function(e){
+        console.log(e.srcElement);
+        console.log(e.target);
+        
+        // These represent the x and y coordinates of the mouse pointer relative to the viewport (the visible area of the browser window).
+        console.log(e.clientX);
+        console.log(e.clientY);
+
+        //represent the x and y coordinates of the mouse pointer relative to the "entire screen" or the "monitor display".
+        //includes the position of the browser window on the screen and any decorations like the browser's title bar or window border.
+        console.log(e.screenX); 
+        console.log(e.screenY);
+        
+        // if(e.altKey){
+        //     console.log('Alt key is pressed');
+        // }else{
+        //     console.log('Alt key is not pressed');
+        // }
+
+       
+    },false);
+    
+    // clientX: use to get the horizontal coordinate of the mouse pointer when the event was triggered
+    // clientY: use to get the vertical coordinate of the mouse pointer when the event was triggered
+    // screenX: use to get the horizontal coordinate of the mouse pointer when the event was triggered
+    // screenY: use to get the vertical coordinate of the mouse pointer when the event was triggered
+    // altkey : use to get a boolean value that indicates whether the "ALT" key was pressed during the triggering of the event
+    // ctrlkey : use to get a boolean value that indicates whether the "CTRL" key was pressed during the triggering of the event
+    // shiftkey : use to get a boolean value that indicates whether the "SHIFT" key was pressed during the triggering of the event
+    // keyCode : use to get the Unicode character code of the key that triggered the onkeypress event
+</script>
+</html>
