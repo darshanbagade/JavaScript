@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of events HTML</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            width: 600px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #msg{
+            width: 200px;
+            height: 80px;
+            
+           
+            flex-direction: column;
+        }
+        #shape{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 0px;
+            text-align: center;
+            align-content: center;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="msg">
+        <p>1.Single click : change shape<br>
+        2.Up/down key : change color</p>
+    </div>
+    <div id="shape" tabindex="0">
+        <span></span>
+    </div>
+
+
+    <script>
+        //for color change : on mouse click
+        document.querySelector('#shape').addEventListener('click',
+        function(e){
+            const shape = document.getElementById('shape');
+            if(shape.style.backgroundColor === "red"){
+                shape.style.backgroundColor = "blue";
+            }
+            else{
+                shape.style.backgroundColor= "red";
+            }
+        });
+
+        // for shape Change : on up/down press
+        document.querySelector('#shape').addEventListener('keyup',
+        function(e){
+            const shape = document.getElementById('shape');
+            if(shape.style.borderRadius=== '0%'){
+                shape.style.borderRadius = '100%';
+            }
+            else{
+                shape.style.borderRadius = '0%';
+            }
+        });
+        
+
+
+
+    </script>
+</body>
+</html>
