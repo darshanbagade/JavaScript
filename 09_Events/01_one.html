@@ -45,6 +45,10 @@
             //-----------------------------------------------------
             //learn by yourself
             //types of events : keyboard, mouse,
+            
+
+
+
             //timeStamp,preventDefault(),target,toElement,srcElement,currentElement
             //clientX,clientY,screenX,screenY
             //altkey, ctrlkey , shiftkey, keyCodeel
@@ -72,19 +76,32 @@
 
             // document.getElementById('google').addEventListener('click',function(e){
             //     console.log("google clicked");
-            //     e.preventDefault();
+            //     e.preventDefault();// google will not open after click,becoz preventDefault method will cancle the event
             //     //The preventDefault() method cancels the event if it is cancelable
             //     e.stopPropagation(); //stops the bubbleing
             // },false);
 
 
-            document.getElementById('images').addEventListener('click',function(e){
-                console.log(e.target.parentNode);//parentNode is <li>
-                    let removeIt = e.target.parentNode;
-                    // removeIt.remove();
-                    removeIt.parentNode.removeChild(removeIt);
-            })
+            //click to remove the images
+            document.querySelector("#images").addEventListener('click',
+            function(e){
 
+
+                // if(e.target.tagName=== 'IMG'){
+                //     e.target.parentNode.remove();
+                // }
+
+
+                console.log(e.target.tagName);//it gives the the tagname of target
+                if(e.target.tagName === 'IMG'){
+                    let removeIt = e.target.parentNode;
+                    removeIt.remove();
+                }
+                
+                // removeIt.remove(); 
+                // removeIt.parentNode.removeChild(removeIt);
+            })
+           
 
 
         </script>
