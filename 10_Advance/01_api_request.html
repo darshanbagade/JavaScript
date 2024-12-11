@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+    </style>
+</head>
+<body>
+<!-- 
+    Value	State	            Description
+     0	    UNSENT	            Client has been created. open() not called yet.
+     1	    OPENED	            open() has been called.
+     2	    HEADERS_RECEIVED	send() has been called, and headers and status are available.
+     3	    LOADING	            Downloading; responseText holds partial data.
+     4	    DONE	            The operation is complete. 
+-->
+
+<script>
+ const xhr = new XMLHttpRequest(); // XMLHttpRequest is an object in JavaScript that is used to interact with servers.
+ const requestURL = 'https://api.github.com/users/darshanbagade';
+ xhr.open('GET',requestURL); //open() method initializes a request.
+
+ //onreadystatechange property should be directly assigned to a function, not invoked like a method.
+ xhr.onreadystatechange = function(){
+
+    console.log(xhr.readyState);// readyState property holds the status of the XMLHttpRequest.
+
+    if(xhr.readyState === 4 ){
+        //many time the data comes in the form of string, we have to convert it into JSON 
+        const data = JSON.parse(this.responseText);
+        console.log("followers:" , data.followers);
+    }
+ }
+ xhr.send();// send() method sends the request to the server.
+
+
+//*****************************************************************
+//Console :
+// console is not a part of JavaScript, it is a part of the browser.
+// it comes from V8 engine opensource library. 
+// the v8 engine is written in c++
+// console.log() is a method in JavaScript used to display messages in the console.
+
+</script>
+
+</body>
+</html>
