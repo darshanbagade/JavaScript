@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Card</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:  rgb(234, 255, 252);
+            color: white;
+
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            width: 350px;
+            border-radius: 6px;
+            background-color:#212121;
+            box-shadow: 18px 18px 0 0 gold, 18px 18px 0 4px black;
+        }
+       
+        #myimg{
+            height:130px;
+            width:130px;
+            border-radius:100%;
+            border: 2px solid;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="image"><img id="myimg" src="" alt=""></div>
+        <div id="name"></div>
+        <div id="followers">Followers :</div>
+    </div> 
+
+</body>
+<script>
+    const name = document.getElementById('name');
+    const myimg = document.getElementById('myimg');
+    const followers = document.getElementById('followers');
+
+    const xhr = new XMLHttpRequest();
+    const requestURL = "https://api.github.com/users/darshanbagade";
+    xhr.open('GET',requestURL);
+
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText);
+            console.log(data);
+            myimg.src = `${data.avatar_url}`;
+            name.innerHTML = `Name : ${data.name}`;
+            followers.innerHTML = `Followers : ${data.followers}`;
+
+        }
+    }
+    xhr.send();
+</script>
+
+</html>
