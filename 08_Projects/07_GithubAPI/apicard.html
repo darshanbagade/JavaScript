@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Parkinsans:wght@300..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <style>
+
+        body{
+            background-color: #212121;
+            font-family: "Nunito", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+
+        }
+        /* From Uiverse.io by SteveBloX */ 
+        .loader {
+        width: 550px;
+        height: 550px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .loader_cube {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+        border-radius: 10px;
+        }
+
+        .loader_cube--glowing {
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .loader_cube--color {
+        z-index: 1;
+        filter: blur(4px);
+        background: linear-gradient(45deg, #ffca18, #ff6f00);
+        animation: loadtwo 3s ease-in-out infinite;
+        }
+
+        @keyframes loadtwo {
+        50% {
+            transform: rotate(-90deg);
+        }
+        }
+       
+        #myimg{
+            height:140px;
+            width:140px;
+            border-radius:100%;
+            border: 2px solid;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader_cube loader_cube--color"></div>
+        <div class="loader_cube loader_cube--glowing">
+            <div id="image"><img id="myimg" src="" alt=""></div>
+            <div id="name"></div>
+            <div id="followers">Followers :</div>
+        </div>
+    </div>
+</body>
+<script>
+    const name = document.getElementById('name');
+    const myimg = document.getElementById('myimg');
+    const followers = document.getElementById('followers');
+
+    const xhr = new XMLHttpRequest();
+    const requestURL = "https://api.github.com/users/darshanbagade";
+    xhr.open('GET',requestURL);
+
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText);
+            console.log(data);
+            myimg.src = `${data.avatar_url}`;
+            name.innerHTML = `Name : ${data.name}`;
+            followers.innerHTML = ` Github Followers : ${data.followers}`;
+
+        }
+    }
+    xhr.send();
+</script>
+</html>
