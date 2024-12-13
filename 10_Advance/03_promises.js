@@ -190,3 +190,19 @@ fetch("https://api.github.com/users/darshanbagade")
     console.log('E :', error);
 });
 
+//------------------------------------------------------------------------------------------
+
+//Fetch mechanism :
+//fetch is divided into two parts
+
+//1. Web browser / node : for api request
+//      Handle the network request and response
+//      if the request is successful it will go to onfulfilled (error 404 also goes to onfulfilled)
+//      if the request is not successful it will go to onrejected
+
+//2. Data to reserve the space for the data
+//      Onfulfilled : when the data is fetched
+//      Onrejected : when the data is not fetched
+//      data is not directly pushed into these variables
+
+//when the data is fetched it go to onfulfilled and then store into the variable
