@@ -55,14 +55,14 @@ function UserDetail(username, loginCount, isLoggedIn) {
         console.log(`Welcome ${this.username}`);
     }
 
-    // return this; // This is implicit and not needed
+    return this; // This is implicit and not needed
 }
 
 // If we don't use the 'new' keyword, it will overwrite the values of userOne
 // const userOne = UserDetail("darshan", 10, true);
-// console.log(userOne); // undefined
+// console.log(userOne); 
 // const userTwo = UserDetail("aryan", 10, false);
-// console.log(userOne); // undefined
+// console.log(userOne); 
 
 // To avoid overwriting values, we use the 'new' keyword
 const userOne = new UserDetail("darshan", 10, true);
