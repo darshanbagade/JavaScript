@@ -3,6 +3,15 @@
 // Object.getOwnPropertyDescriptor() method is used to get a property descriptor for an own property 
 // (that is, one directly present on an object and not in the object's prototype chain) of a given object.
 
+//{
+//    value: 3.141592653589793, // value of the property
+//    writable: false,  // we can't change the value of the property
+//    enumerable: false, // we can't see the property in the object (it will not get printed or in loop)
+//    configurable: false // we can't delete the property
+//}
+
+
+
 
 //The value of PI can't it is not writable, enumerable and configurable
 // which is set to false
