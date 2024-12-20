@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+
+</body>
+    <script>
+        //---lexical Scope:---
+        // inner function can access the variables of outer function but
+        // outer function can not access the variables of inner function
+
+        // function outer(){
+        //     let username = "darshan";
+        //     function inner(){
+        //         const secret ="kkpncc";
+        //         console.log("inner :", username);
+        //     }
+        //     // console.log(secret);//can't access
+
+        //     function innerTwo(){
+        //         console.log("innerTwo :", username);
+        //         // console.log(secret); //can't access the secret
+        //     }
+        //     inner();
+        //     innerTwo();
+        // }
+        // outer();
+
+        // console.log("Too Outer ", username); 
+        //varibles declared inside the function, can not be accessible outside the function 
+
+
+
+        //-----------------------------------------------------------
+    
+        // -------------Closure----------------
+        // function makeFunc() {
+        //     const name = "Mozilla";
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     return displayName;
+               //it will return complete lexical scope of 'makeFunc'
+        // }
+
+        // makeFunc() will return complete lexical scope of the function
+        // instead of returning only 'displayName()' 
+
+        // const myFunc = makeFunc();
+        // myFunc();
+
+    </script>
+
+    <script>
+        // document.getElementById('orange').onclick =
+        // function(){
+        //     document.body.style.backgroundColor = "orange";
+        // };
+        // document.getElementById('green').onclick =
+        // function(){
+        //     document.body.style.backgroundColor = "green";
+        // };
+
+        //-----Using Generic Function------
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`;
+            return function(){
+                document.body.style.backgroundColor = `${color}`;
+            }
+        }
+        //it will only get the reference
+        document.getElementById('orange').onclick = clickHandler;
+
+        //for execution of this function we have use the concept of closure
+        document.getElementById('orange').onclick = clickHandler("orange");
+        document.getElementById('green').onclick = clickHandler("green");
+
+    </script>
+</html>
