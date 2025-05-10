@@ -73,21 +73,34 @@
 // console.log("1" + 2 + 2) //122
 // console.log(1 + 2 + "2") //32
 
-// console.log(+true); //1
-// console.log(+""); //0
+
+//-------------Unary + operator -----------------
+// The unary + operator is used to convert a value to a number.
+// It can be applied to various types of values, including strings, booleans, and objects.
+
+// Applying the unary + operator to a truthy value results in 1.
+// console.log(+true); //1 - The unary plus operator converts the boolean 'true' to the number 1.
+
+// Applying the unary + operator to a falsy value results in 0.
+// console.log(+null); //0 
+
+// Applying the unary + operator to a non-numeric string results in NaN.
+// console.log(+"darshan"); //NaN
+
+// Aplying the unary + operator to a numeric string results in the number itself.
+// console.log(+"123"); //123 
+// console.log(+123); //123
 
 
-
-// increment and decrement
+//-----increment and decrement-----
 //link -  https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+
 // let x = 3;
 // const y = x++;
-
 // console.log(`x:${x}, y:${y}`);
 // Expected output: "x:4, y:3"
 
 // let a = 3;
 // const b = ++a;
-
 // console.log(`a:${a}, b:${b}`);
 // Expected output: "a:4, b:4"
