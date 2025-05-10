@@ -22,6 +22,18 @@
 // console.log(typeof null) 
 
 //Ex.Undefined : when variable is decalred and if no value assigned to it, then it is undefined
-let myVariable;
-console.log(myVariable); //undefined
-console.log(typeof myVariable); //undefined
+// let myVariable;
+// console.log(myVariable); //undefined
+// console.log(typeof myVariable); //undefined
+
+// Null :
+// null expresses a lack of identification, indicating that a variable points to no object
+// typeof null; // "object" (not "null" for legacy reasons)
+// typeof undefined; // "undefined"
+// null === undefined; // false
+// null == undefined; // true
+// null === null; // true
+// null == null; // true
+// !null; // true
+// Number.isNaN(1 + null); // false
+// Number.isNaN(1 + undefined); // true
