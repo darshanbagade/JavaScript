@@ -60,7 +60,7 @@ const myObj= {
 
 console.log(myObj.email); //darshan@github.com
 
-Object.freeze(myObj.email);
+Object.freeze(myObj);
 myObj.email = "darshan@google.com";
 
 // the original email value will not change, bcoz it is fixed
